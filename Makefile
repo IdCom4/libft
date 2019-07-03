@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 13:03:43 by idcornua          #+#    #+#              #
-#    Updated: 2019/04/16 17:30:46 by idcornua         ###   ########.fr        #
+#    Updated: 2019/07/03 11:41:07 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -207,7 +207,7 @@ $(NAME): $(OBJECTS)
     	fi ; \
         ((number = number + 1)) ; \
     done ; \
-    printf "${PRCS_CLR}| Compiling %.10s...\r" "$<"
+    printf "${PRCS_CLR}| Compiling %-22s\r" `echo $< | rev | cut -d '/' -f1 | rev`
 	@$(CC) $(CFLAGS) -I . -o $@ -c $<
 
 clean:
