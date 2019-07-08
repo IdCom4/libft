@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 13:03:43 by idcornua          #+#    #+#              #
-#    Updated: 2019/07/03 11:41:07 by idcornua         ###   ########.fr        #
+#    Updated: 2019/07/08 13:14:46 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,6 +126,7 @@ SRCS += $(MATH_DIR)ft_base_n_to_x.c
 SRCS += $(MATH_DIR)ft_to_base_10_ull.c
 SRCS += $(MATH_DIR)ft_from_base_10_ull.c
 SRCS += $(MATH_DIR)ft_base_n_to_x_ull.c
+SRCS += $(MATH_DIR)ft_diff.c
 # FT_PRINTF
 SRCS += $(FT_PRINTF_DIR)array_type1.c
 SRCS += $(FT_PRINTF_DIR)array_type2.c
