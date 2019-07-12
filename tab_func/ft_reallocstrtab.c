@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtabdup.c                                     :+:      :+:    :+:   */
+/*   ft_reallocstrtab.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/21 16:28:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/07/12 13:49:37 by idcornua         ###   ########.fr       */
+/*   Created: 2019/07/12 13:49:59 by idcornua          #+#    #+#             */
+/*   Updated: 2019/07/12 14:46:20 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strtabdup(char **tab, size_t tab_size)
+char	**ft_reallocstrtab(char **tab, size_t old_size, size_t new_size)
 {
-	char	**dup;
-	size_t	n;
+	size_t	i;
+	char	**new;
 
-	if (tab_size == 0 || !tab || !(dup = (char **)ft_mallstrtab(tab_size, 0)))
+	if (new_size == 0 || !(new = ft_mallstrtab(new_size, 0)))
 		return (NULL);
-	n = 0;
-	while (n < tab_size)
+	if (!tab || old_size == 0)
+		return (new);
+	i = 0;
+	while (i < old_size)
 	{
-		if (!(dup[n] = ft_strdup(tab[n])))
-			return (ft_freestrtab(dup, n, 1));
-		n++;
+		new[i] = tab[i];
+		i++;
 	}
-	return (dup);
+	free(tab);
+	return (new);
 }

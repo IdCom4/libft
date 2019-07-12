@@ -6,7 +6,7 @@
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 12:50:59 by idcornua          #+#    #+#             */
-/*   Updated: 2019/04/14 15:39:16 by idcornua         ###   ########.fr       */
+/*   Updated: 2019/07/12 14:44:02 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include "ft_printf/ft_printf.h"
 # define BUFF_SIZE 50
 
@@ -54,15 +55,20 @@ char				*ft_from_base_10(long long nbr, char *base_to,
 long long			ft_to_base_10(char *nbr, char *base_from, int base_len);
 int					ft_power(int nb, int power);
 int					ft_sqrt(int nb);
+long double			ft_diff(long double d1, long double d2);
+long double			ft_div(long double d1, long double d2);
 void				ft_strtabcpy(char **dest, char **src, size_t src_size);
 char				**ft_strtabdup(char **tab, size_t tab_size);
 void				*ft_mallstrtab(size_t tab_size, size_t str_size);
+char				**ft_reallocstrtab(char **tab, size_t old_size,
+					size_t new_size);
 int					get_next_line(const int fd, char **line);
 void				ft_lstdelthis(t_list **head, t_list *t_del);
 t_list				*ft_lstfindor(t_list *head, size_t cs, void *content);
 char				*ft_strndup(const char *s, size_t n);
 char				*ft_strndel(char *s, int direction, size_t to_remove);
 char				*ft_strchrf(char *s, int c);
+int					ft_readfile(char *filename, char ***dest);
 char				*ft_strjoinf(const char *s1, const char *s2, int to_free);
 int					ft_strichr(const char *s, int c);
 char				*ft_strccpy(char *dest, const char *src, int c);

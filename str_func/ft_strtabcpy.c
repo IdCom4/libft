@@ -6,7 +6,7 @@
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 16:50:43 by idcornua          #+#    #+#             */
-/*   Updated: 2018/12/21 16:54:09 by idcornua         ###   ########.fr       */
+/*   Updated: 2019/07/12 14:40:20 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strtabcpy(char **dest, char **src, size_t src_size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < src_size)

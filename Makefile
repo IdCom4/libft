@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 13:03:43 by idcornua          #+#    #+#              #
-#    Updated: 2019/07/08 13:14:46 by idcornua         ###   ########.fr        #
+#    Updated: 2019/07/12 14:31:24 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRCS += $(STR_DIR)ft_strdupf.c
 SRCS += $(STR_DIR)ft_strrev.c
 SRCS += $(STR_DIR)ft_chars_split.c
 SRCS += $(STR_DIR)ft_stristr.c
+SRCS += $(STR_DIR)ft_readfile.c
 # TOA FUNCTIONS
 SRCS += $(TOA_DIR)ft_intlen.c
 SRCS += $(TOA_DIR)ft_atoi.c
@@ -117,6 +118,7 @@ SRCS += $(TAB_DIR)ft_freestrtab.c
 SRCS += $(TAB_DIR)ft_printinttab.c
 SRCS += $(TAB_DIR)ft_printstrtab.c
 SRCS += $(TAB_DIR)ft_mallstrtab.c
+SRCS += $(TAB_DIR)ft_reallocstrtab.c
 # MATH FUNCTIONS
 SRCS += $(MATH_DIR)ft_sqrt.c
 SRCS += $(MATH_DIR)ft_power.c
@@ -127,6 +129,7 @@ SRCS += $(MATH_DIR)ft_to_base_10_ull.c
 SRCS += $(MATH_DIR)ft_from_base_10_ull.c
 SRCS += $(MATH_DIR)ft_base_n_to_x_ull.c
 SRCS += $(MATH_DIR)ft_diff.c
+SRCS += $(MATH_DIR)ft_div.c
 # FT_PRINTF
 SRCS += $(FT_PRINTF_DIR)array_type1.c
 SRCS += $(FT_PRINTF_DIR)array_type2.c
